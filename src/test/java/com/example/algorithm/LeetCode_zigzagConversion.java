@@ -37,10 +37,10 @@ class LeetCode_zigzagConversion {
             while(k <= numRows) {
                 while(resultSb.length() < sl) {
                     for(int i = 0; i < sl; i++) {
-                        if(sl % lou == k) {
-                            resultSb.append(s.charAt(k));
-                        } else if(sl % lou == 2*numRows - 1 - k) {
-                            resultSb.append(s.charAt(2*numRows -1 -k));
+                        if((i+1) % lou == k) {
+                            resultSb.append(s.charAt(k - 1));
+                        } else if((i+1) % lou == 2*numRows - 1 - k) {
+                            resultSb.append(s.charAt(2*numRows - 1 - k - 1));
                         }
                     }
                 }
